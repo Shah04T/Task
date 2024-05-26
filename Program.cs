@@ -23,8 +23,14 @@ static string[] GetReadysentences(num)
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         fchr = string.Empty;
     }
-}
+string[] sentences = new string[count];
+        for (int i = 0; i < count; i++)
+        {
+            sentences[i] = input[i];
+        }
 
+        return sentences;
+    }
 results += "[ ";
 for (int i = 0; i < count; i++)
 {
