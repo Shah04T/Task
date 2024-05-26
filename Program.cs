@@ -1,1 +1,1 @@
-﻿int [] arrayn = Convert.ToInt32(Console.ReadLine());
+﻿
