@@ -3,6 +3,8 @@
 Console.Write("Сколько предложений вы будите вводить?:");
 int num = Convert.ToInt32(Console.ReadLine());
 string[] sentences = GetReadysentences(num);
+string results = NowResults(sentences);
+Console.Write(results);
 
 static string[] GetReadysentences(num)
 {
@@ -23,22 +25,26 @@ static string[] GetReadysentences(num)
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
         fchr = string.Empty;
     }
-string[] sentences = new string[count];
-        for (int i = 0; i < count; i++)
-        {
-            sentences[i] = input[i];
-        }
-
-        return sentences;
-    }
-results += "[ ";
-for (int i = 0; i < count; i++)
-{
-    results += sentences[i];
-    if (i != count-1)
+    string[] sentences = new string[count];
+    for (int i = 0; i < count; i++)
     {
-        results += ", ";
+        sentences[i] = input[i];
     }
+
+    return sentences;
 }
-results += "]";
-Console.Write(results);
+
+static string NowResults(string[] sentences)
+{
+    string results += "[ ";
+    for (int i = 0; i < count; i++)
+    {
+        results += sentences[i];
+        if (i != count - 1)
+        {
+            results += ", ";
+        }
+    }
+    results += "]";
+    return results;
+}
