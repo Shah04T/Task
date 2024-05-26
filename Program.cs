@@ -5,7 +5,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 string[] sentences = GetReadysentences(num);
 string results = NowResults(sentences);
 Console.Write(results);
-
+// Первая функция выбирает предложения с 3 и сеньше буквами или символами 
 static string[] GetReadysentences(num)
 {
     string[] input = new string(num);
@@ -33,7 +33,7 @@ static string[] GetReadysentences(num)
 
     return sentences;
 }
-
+// Вторя функция, которя дает результаты
 static string NowResults(string[] sentences)
 {
     string results += "[ ";
